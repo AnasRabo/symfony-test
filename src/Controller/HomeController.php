@@ -16,3 +16,28 @@ class HomeController {
 	}
 
 }
+
+class Apropos {
+
+    //si l'utilisateur demande l'url '/' , alors on lui renvoie la fonction
+	#[Route('/a-propos', name:"a-propos")] 
+
+    //  fonction pour afficher un var_dump
+	public function home() {   
+        // on affiche "Page infos"
+		var_dump('Page infos'); die;
+	}
+
+}
+class Contact {
+
+    //si l'utilisateur demande l'url '/' , alors on lui renvoie la fonction
+	#[Route('/contact', name:"contact")] 
+
+    //  fonction pour afficher un var_dump
+	public function home() {   
+        // on affiche "Page contat"
+		var_dump('Page contact'); die;
+	}
+
+}
