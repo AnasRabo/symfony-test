@@ -4,7 +4,8 @@ namespace App\Controller;
 
 use Symfony\Component\Routing\Annotation\Route;
 
-class listArticles{
+class HomeController{
+    
     #[route("/list-articles", name:"list-articles")]
 
     public function list() {    //  fonction pour afficher un var_dump
