@@ -2,17 +2,17 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomeController {
+class HomeController extends AbstractController {
 
-    //si l'utilisateur demande l'url '/' , alors on lui renvoie la fonction
-	#[Route('/', name:"home")] 
+   
+	#[Route('/', name:"home")]   //si l'utilisateur demande l'url '/' , alors on lui renvoie la fonction
+    public function home() {    //  fonction pour afficher un var_dump
 
-	public function home() {    //  fonction pour afficher un var_dump
-
-        return new Response("<p>Hello Accueil</p>", 200); // on affiche "Page accueil"
+        return $this->render('home.html.twig'); // on affiche "Page accueil"
 	}
 
 }
